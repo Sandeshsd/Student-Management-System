@@ -51,10 +51,10 @@ background-color:#000000d1;
 }
 .btm{
 width:80px;
-height:28px;
+height:30px;
 background-color: #ff7200;
 border: none;
-margin-top: 16px;
+margin-top: 25px;
 font-size: 13px;
 border-radius: 10px;
 cursor: pointer;
@@ -65,17 +65,40 @@ transition:0.5s ease;
 	background: #fff;
 	color: #ff7200;
 }
+.form .link{
+font-family: arial,helvetica, sans-serif;
+font-size: 16px;
+padding-top: 5px;
+text-align: centre;
+color: black;
+}
+.form .link a{
+ text-decoration:none;
+ color:#ff7200;
+ font-weight: bold;
+}
+.form .link a:hover{
+color: white;
+}
+
+.liw{
+padding-top:15px;
+}
 
 </style>
 
 <div class="form">
-<h2>Admin signup</h2>
-   <form action="signup" method="post">
-   <input class="btn" name="adminName" placeholder="enter name" type="text"><br><br>
-   <input class="btn" name="adminEmail" placeholder="enter email" type="email"><br><br>
-   <input class="btn" name="adminPassword" placeholder="enter password" type="password"><br><br>
-   <input class="btm" type="submit" value="signup">
-   </form>
- </div>
+<h2>admin login</h2>
+<form action="login" method="post">
+<input class="btn" type="email" placeholder="enter your email" name="adminEmail" required="required"><br>
+<input class="btn" type="password" placeholder="enter your password" name="adminPassword" required="required">
+<input class="btm" type="submit" value="LogIn">
+
+<p class="link">New user ? Don't have an account
+<a href="adminsignup.jsp">signup</a></p>
+<p class="liw">log in with</p>
+</form>
+</div>
+
 </body>
 </html>

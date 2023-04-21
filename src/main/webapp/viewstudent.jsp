@@ -1,3 +1,4 @@
+<%@page import="com.project.studentdto.Admin"%>
 <%@page import="java.util.List"%>
 <%@page import="com.project.studentdto.Student"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -6,10 +7,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Student Management System</title>
 </head>
 <body>
-<% List<Student> students=(List) (request.getAttribute("students")); %>
+<% Admin admin=(Admin) session.getAttribute("admin"); 
+if(admin!=null) {
+	List<Student> students=(List) (request.getAttribute("students")); %>
 <h2>student list</h2>
  <table border="" cellpadding="5px" cellspacing="">
   <thead>
@@ -39,6 +42,13 @@
   </tbody>
   
  </table>
+<a href="dashboard.jsp">Home</a>
+
+<%}else{
+	response.sendRedirect("adminlogin.jsp");
+}
+	
+	%>
 
 </body>
 </html>

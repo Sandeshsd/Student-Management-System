@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Student {
@@ -14,6 +16,11 @@ public class Student {
 	private String studentEmail;
 	private long studentPhoneNumber;
 	private double studentFee;
+	
+	@ManyToOne
+	@JoinColumn
+	private Admin admin;
+	
 	public int getStudentId() {
 		return studentId;
 	}
@@ -43,6 +50,12 @@ public class Student {
 	}
 	public void setStudentFee(double studentFee) {
 		this.studentFee = studentFee;
+	}
+	public Admin getAdmin() {
+		return admin;
+	}
+	public void setAdmin(Admin admin) {
+		this.admin = admin;
 	}
 	
 	

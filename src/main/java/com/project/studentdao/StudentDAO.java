@@ -8,6 +8,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import com.project.studentdto.Admin;
 import com.project.studentdto.Student;
 
 public class StudentDAO {
@@ -21,8 +22,9 @@ public class StudentDAO {
 		em.persist(student);
 		et.commit();
 	}
-	public List<Student> getAllStudents() {
-		Query query=em.createQuery("select s from Student s");
+	public List<Student> getAllStudents(Admin admin) {
+		Query query=em.createQuery("select s from Student s where s.admin=?1");
+		query.setParameter(1, admin);
 		List students=query.getResultList();
 		
 		return students;
@@ -38,7 +40,7 @@ public class StudentDAO {
 	}
 	public void removeStudent(int studentId) {
 		et.begin();
-		em.remove(studentId);
+		em.remove(em.find(Student.class,studentId));
 		et.commit();
 	}
 

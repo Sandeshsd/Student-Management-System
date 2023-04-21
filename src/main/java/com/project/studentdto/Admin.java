@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,7 +19,7 @@ private String adminName;
 @Column(unique= true)
 private String adminEmail;
 private String adminPassword;
-@OneToMany
+@OneToMany(mappedBy = "admin", fetch = FetchType.LAZY)
 List<Student> students;
 
 public int getAdminId() {

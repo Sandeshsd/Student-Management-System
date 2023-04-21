@@ -25,6 +25,8 @@ public class AdminSignUp extends HttpServlet {
 		admin.setAdminPassword(password);
 		
 	new	AdminDAO().adminSinup(admin);
+	
+	req.getRequestDispatcher("adminlogin.jsp").forward(req, resp);
 	}
 
 }
