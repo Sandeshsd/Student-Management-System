@@ -29,8 +29,9 @@ margin-left: 165px;
 padding-bottom: -14px;
 }
 .form marquee{
+
 margin-left:158px;
-margin-right:130px;
+margin-right:105px;
 }
 .form a{
 text-decoration: none;
@@ -39,10 +40,18 @@ margin-left: 40px;
 }
 .btn{
 margin-left: 162px;
-border: 1px;
+
 }
-a.btn{
-border: 1px;
+.btm{
+border: 1px solid black;
+border-radius: 7px;
+padding:4px 7px;
+background-color: black;
+color: #fff;
+transition: 0.5s ease;
+}
+.btm:hover{
+color:#f36e00;
 }
 
 
@@ -53,10 +62,10 @@ border: 1px;
   %>
   <div class="form">
  <h1>welcome admin</h1>
-<marquee behavior="slide"><h2>You can manage students data here !</h2></marquee>
+<marquee scrollamount="15" behavior="slide"><h2>You can manage students data here !</h2></marquee>
 <div class="btn">
-<a class="btm" href="savestudent.jsp">save_student</a>
-<a class="btm" href="viewstudents">view_students</a>
+<a class="btm" href="savestudent.jsp">save student</a>
+<a class="btm" href="viewstudents">view students</a>
 </div>
 </div>
 <% }else{

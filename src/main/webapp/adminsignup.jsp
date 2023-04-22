@@ -71,9 +71,9 @@ transition:0.5s ease;
 <div class="form">
 <h2>Admin signup</h2>
    <form action="signup" method="post">
-   <input class="btn" name="adminName" placeholder="enter name" type="text"><br><br>
-   <input class="btn" name="adminEmail" placeholder="enter email" type="email"><br><br>
-   <input class="btn" name="adminPassword" placeholder="enter password" type="password"><br><br>
+   <input class="btn" name="adminName" placeholder="enter name" type="text" required="required"><br><br>
+   <input class="btn" name="adminEmail" placeholder="enter email" type="email" required="required"><br><br>
+   <input class="btn" name="adminPassword" placeholder="enter password" type="password" required="required"><br><br>
    <input class="btm" type="submit" value="signup">
    </form>
  </div>

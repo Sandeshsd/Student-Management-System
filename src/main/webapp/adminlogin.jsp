@@ -12,7 +12,7 @@
 margin-top:9%;
 background-color:#000000d1;
   width: 250px;
-  height: 360px;
+  height: 400px;
   background: linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%));
   position: absolute;
   top:18px;
@@ -69,8 +69,9 @@ transition:0.5s ease;
 font-family: arial,helvetica, sans-serif;
 font-size: 16px;
 padding-top: 5px;
+padding-bottom:10px;
 text-align: centre;
-color: black;
+color: #908a8a;
 }
 .form .link a{
  text-decoration:none;
@@ -82,7 +83,26 @@ color: white;
 }
 
 .liw{
-padding-top:15px;
+padding-top:-27px;
+padding-bottom:-10px;
+font-size:18px;
+color:#908a8a;
+}
+.icon{
+margin:-10px ;
+}
+.icon a{
+text-decoration: none;
+color: #fff;
+}
+.icon ion-icon{
+color:#fff;
+font-size: 25px;
+padding-left: 20px;
+padding-top: 10px;
+}
+.icon ion-icon:hover{
+color:#ff7200;
 }
 
 </style>
@@ -97,8 +117,17 @@ padding-top:15px;
 <p class="link">New user ? Don't have an account
 <a href="adminsignup.jsp">signup</a></p>
 <p class="liw">log in with</p>
-</form>
+<div class="icon">
+<a href="#"><ion-icon name="logo-google"></ion-icon></a>
+<a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+<a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+<a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+
 </div>
 
+</form>
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 </html>
