@@ -9,9 +9,11 @@
 </head>
 <body>
 <body>
-<% Student student=(Student)request.getAttribute("student"); %>
  
  <style>
+ html{
+overflow: hidden;
+}
 .form{
 margin-top:9%;
 background-color:#000000d1;
@@ -69,17 +71,18 @@ transition:0.5s ease;
 	background: #fff;
 	color: #ff7200;
 }
-
 </style>
+
+<% Student student=(Student)request.getAttribute("student"); %>
  
  <div class="form">
  <h2>Update Student</h2>
 <form  action="saveupdatestudent" method="post">
- <input class="btn" type="text" placeholder="studentId" name="studentId" value="<%student.getStudentId();  %>" readonly="readonly" > <br>
-  <input class="btn" type="text" placeholder="student name" value="<%student.getStudentName(); %>" name="studentName" required="required"><br>
- <input class="btn" type="email" placeholder="student email" value="<%student.getStudentEmail(); %>" name="studentEmail" required="required"> <br>
- <input class="btn" type="text" placeholder="student phone number" value="<%student.getStudentPhoneNumber(); %>" name="studentPhoneNumber" required="required"> <br>
-  <input class="btn" type="email" placeholder="student fee" value="<%student.getStudentFee(); %>" name="studentFee" readonly="readonly"> <br>
+ <input class="btn" type="text" placeholder="student Id" name="studentId" value="<%= student.getStudentId()  %>" readonly="readonly" > <br>
+  <input class="btn" type="text" placeholder="student name" value="<%= student.getStudentName() %>" name="studentName" required="required"><br>
+ <input class="btn" type="email" placeholder="student email" value="<%= student.getStudentEmail() %>" name="studentEmail" required="required"> <br>
+ <input class="btn" type="text" placeholder="student phone number" value="<%= student.getStudentPhoneNumber() %>" name="studentPhoneNumber" required="required"> <br>
+  <input class="btn" type="email" placeholder="student fee" value="<%= student.getStudentFee() %>" name="studentFee" readonly="readonly"> <br>
  <input class="btm" type="submit" value="update">
  </form>
  </div>

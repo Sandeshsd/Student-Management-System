@@ -27,7 +27,7 @@ import com.project.studentdto.Student;
 		String studentName=req.getParameter("studentName");
 		String studentEmail=req.getParameter("studentEmail");
 		long studentphno=Long.parseLong(req.getParameter("studentPhoneNumber"));
-		double studentFee=Double.parseDouble("studentFee");
+		double studentFee=Double.parseDouble(req.getParameter("studentFee"));
 		
 		Student student=new Student();
 		student.setStudentId(studentId);

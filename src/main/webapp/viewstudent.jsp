@@ -12,6 +12,9 @@
 <body>
 
 <style>
+html{
+overflow: hidden;
+}
 .table{
 margin: 10% 0% 0% 23%;
 }
@@ -57,7 +60,7 @@ text-align: center;
 
 <% Admin admin=(Admin) session.getAttribute("admin"); 
 if(admin!=null) {
-	List<Student> students=(List) (request.getAttribute("students")); %>
+	List<Student> students=(List)(request.getAttribute("students")); %>
 	
 	<a class="home" href="dashboard.jsp">Home</a>
 	<div class="table">	

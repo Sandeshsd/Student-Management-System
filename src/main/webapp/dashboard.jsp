@@ -9,6 +9,9 @@
 </head>
 <body>
 <style>
+html{
+overflow: hidden;
+}
 .form{
 margin-top:6%;
 background-color:#e7e4e4d1;
